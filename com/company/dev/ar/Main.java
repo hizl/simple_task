@@ -17,29 +17,22 @@
 
 package com.company.dev.ar;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String str;
-        switch (str = scanner.nextLine()) {
-            case "gryffindor":
-                System.out.println("bravery");
-                break;
-            case "hufflepuff":
-                System.out.println("loyalty");
-                break;
-            case "slytherin":
-                System.out.println("cunning");
-                break;
-            case "ravenclaw":
-                System.out.println("intellect");
-                break;
-            default:
-                System.out.println("not a valid house");
-                break;
-        }
+        System.out.println(getHouses().getOrDefault(scanner.nextLine(), "not a valid house"));
+    }
+
+    static Map<String, String> getHouses() {
+        Map<String, String> houses = new HashMap<>();
+        houses.put("gryffindor", "bravery");
+        houses.put("hufflepuff", "loyalty");
+        houses.put("slytherin", "cunning");
+        houses.put("ravenclaw", "intellect");
+        return houses;
     }
 }

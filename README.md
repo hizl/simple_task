@@ -17,3 +17,4 @@ solution task from lang and rules
    MySizeArrayException and MyArrayDataException and output the calculation result.
    Note : to convert a string to a number, you can use the method of the Integer class:
    **Integer. valueOf ( "1" )**
+    [this solution](https://github.com/hizl/simple_task/tree/master/Exception)

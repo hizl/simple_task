@@ -1,15 +1,10 @@
 package Exception;
 
-public class MyArraySizeException extends NullPointerException {
-    private int array;
-    private int incorrectNumber;
+public class MyArraySizeException extends RootException {
 
 
-
-
-    public MyArraySizeException(int[] array, int correctNumber) {
-        super(correctNumber+ " wrong data " + array[correctNumber]);
-        this.array = array[correctNumber];
-        this.incorrectNumber = correctNumber;
+    public MyArraySizeException() {
+        super();
+        System.out.println("incorrect array size");
     }
 }
